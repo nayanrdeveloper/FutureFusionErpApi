@@ -1,5 +1,5 @@
-import mongoose, { Schema } from "mongoose";
-import { IProduct } from "./types/productType";
+import mongoose, { Schema } from 'mongoose';
+import { IProduct } from './types/productType';
 
 const ProductSchema: Schema = new Schema({
   name: { type: String, required: true },
@@ -8,4 +8,4 @@ const ProductSchema: Schema = new Schema({
   barcode: { type: String, required: true },
 });
 
-export default mongoose.model<IProduct>("Product", ProductSchema);
+export default mongoose.model<IProduct>('Product', ProductSchema);
