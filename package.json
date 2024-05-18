@@ -1,0 +1,48 @@
+{
+  "name": "future_fusion_erp_api",
+  "version": "1.0.0",
+  "description": "FutureFusionErp is ERP based system that make yours sales easily.",
+  "main": "server.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nayanrdeveloper/FutureFusionErpApi.git"
+  },
+  "keywords": [
+    "FutureFusionERP",
+    "ERP",
+    "Sale",
+    "Purchase",
+    "Inventory",
+    "Accounting",
+    "HRMS",
+    "Product",
+    "Reports"
+  ],
+  "author": "Nayan Radadiya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nayanrdeveloper/FutureFusionErpApi/issues"
+  },
+  "homepage": "https://github.com/nayanrdeveloper/FutureFusionErpApi#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^20.12.12",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5"
+  }
+}
