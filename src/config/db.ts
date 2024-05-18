@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import logger from '../utils/logger';
 
 dotenv.config();
 const MONGO_URI =
@@ -8,9 +9,9 @@ const MONGO_URI =
 export const connectDB = async () => {
   try {
     await mongoose.connect(MONGO_URI, {});
-    console.log('MongoDB connected');
+    logger.info('MongoDB Connected');
   } catch (err) {
-    console.error(err);
+    logger.error(err);
     process.exit(1);
   }
 };
