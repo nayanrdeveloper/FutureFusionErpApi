@@ -4,6 +4,8 @@ import morgan from 'morgan';
 import productRoute from './routes/productRoute';
 import corsOptions from './config/corsOptions';
 import logger from './utils/logger';
+import { notFoundHandler } from './middlewares/notFoundHandler';
+import { errorHandler } from './middlewares/errorHandler';
 
 const app: Application = express();
 
@@ -20,5 +22,9 @@ app.use(
 );
 
 app.use('/api', productRoute);
+
+app.use(notFoundHandler);
+
+app.use(errorHandler);
 
 export default app;
