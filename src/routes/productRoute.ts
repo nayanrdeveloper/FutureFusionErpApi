@@ -5,6 +5,6 @@ import { validateProduct } from '../validators/productValidator';
 
 const router: Router = Router();
 
-router.post('/product', validate(validateProduct), createProduct);
+router.post('/', validate(validateProduct), createProduct);
 
 export default router;
