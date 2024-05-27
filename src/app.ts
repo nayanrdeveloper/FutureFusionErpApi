@@ -1,7 +1,7 @@
 import express, { Application } from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
-import productRoute from './routes/productRoute';
+import routes from './routes';
 import corsOptions from './config/corsOptions';
 import logger from './utils/logger';
 import { notFoundHandler } from './middlewares/notFoundHandler';
@@ -21,7 +21,7 @@ app.use(
   }),
 );
 
-app.use('/api', productRoute);
+app.use('/api', routes);
 
 app.use(notFoundHandler);
 
