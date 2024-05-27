@@ -14,11 +14,11 @@ app.use(express.json());
 
 // Morgan setup to use Winston for HTTP request logging
 app.use(
-  morgan('combined', {
-    stream: {
-      write: (message) => logger.info(message.trim()),
-    },
-  }),
+    morgan('combined', {
+        stream: {
+            write: (message) => logger.info(message.trim()),
+        },
+    }),
 );
 
 app.use('/api', routes);
